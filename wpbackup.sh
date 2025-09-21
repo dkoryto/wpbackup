@@ -33,10 +33,10 @@ if [ "$#" -ne 1 ]; then
     exit 0
 fi
 
-if [ -d "$HOSTPATH/$DOMAIN/" ]; then
+if [ -d "$HOSTPATH/websites/$DOMAIN/" ]; then
     backupmake
     exit 0
 else
     echo "directory not found" 
-    exit 0
+    exit 1
 fi
